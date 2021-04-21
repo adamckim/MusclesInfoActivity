@@ -37,7 +37,9 @@ public class MainActivity extends AppCompatActivity {
                 .build();
 
         testService service = retrofit.create(testService.class);
+
         Call<test> testCall = service.getrandomtest();
+
         testCall.enqueue(new Callback<test>() {
             @Override
             public void onResponse(Call<test> call, Response<test> response) {
